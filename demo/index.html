@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="ngydrag, y-axis, draganddrop, drag, drop, angular, demo, khasky" />
+	<meta name="description" content="" />
+	<title>NgYDrag - Demo</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="../dist/ng-y-drag.min.css" />
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="../dist/ng-y-drag.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-controller="BaseController">
+	<div class="container">
+		<a href="https://github.com/khasky"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+		
+		<h3>Default behaviour:</h3>
+		
+		<div class="draggable" ng-y-drag-items="items.primary">
+			<div ng-repeat="item in items.primary" ng-y-drag-item="item">
+				<strong>#{{item.number}}</strong> {{item.title}}
+			</div>
+		</div>
+		
+		<h3>Block drag and drop for first item returning false in ngYDragBefore callback:</h3>
+		
+		<div class="draggable" ng-y-drag-items="items.before" ng-y-drag-before="onBefore(movingItem, swappingItem)">
+			<div ng-repeat="item in items.before" ng-y-drag-item="item">
+				<strong>#{{item.number}}</strong> {{item.title}}
+			</div>
+		</div>
+		
+		<h3>Create fallback and restore after drag and drop using ngYDragStart and ngYDragAfter:</h3>
+		
+		<div class="draggable" ng-y-drag-items="items.after" ng-y-drag-start="onStart(movingItem)" ng-y-drag-after="onAfter(movingItem, swappingItem)">
+			<div ng-repeat="item in items.after" ng-y-drag-item="item">
+				<strong>#{{item.number}}</strong> {{item.title}}
+			</div>
+		</div>
+	</div>
+</body>
+</html>

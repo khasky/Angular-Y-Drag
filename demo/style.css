@@ -1,0 +1,28 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h3 {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.container .draggable > div {
+	padding: 20px 10px;
+	border: 1px dashed transparent;
+}
+.container .draggable > div:nth-of-type(odd) {
+	background: #fbfbfb;
+}
+.container .draggable > div:nth-of-type(even) {
+	background: #f3f3f3;
+}
+
+/* Customize dragging state
+ */
+.ng-y-drag.active {
+	background: rgba(226, 255, 233, 0.8) !important;
+	border-color: #c9f9d5;
+}
