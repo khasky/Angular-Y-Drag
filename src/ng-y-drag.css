@@ -1,0 +1,14 @@
+.ng-y-drag {
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+.ng-y-drag.active {
+	position: relative;
+	z-index: 65535;
+	cursor: -webkit-grabbing;
+	cursor: -moz-grabbing;
+	cursor: grabbing;
+}
