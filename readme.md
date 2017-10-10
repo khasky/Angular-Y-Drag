@@ -1,4 +1,4 @@
-NgYDrag - AngularJS vertical drag and drop
+Angular Y Drag - AngularJS vertical drag and drop
 ===================
 
 ![NgYDrag](https://github.com/khasky/NgYDrag/blob/master/screenshot.png)
