@@ -19,7 +19,7 @@ There are three callback functions, which you would use for extra features:
 
 ## Installation
 
- * Copy **ng-y-drag.min.css** from **dist** directory and include somewhere in your page or just add styles to your stylesheet
+ * Copy **ng-y-drag.min.css** from **dist** directory and include to your page
  * Copy **ng-y-drag.min.js** from **dist** directory and include it before your AngularJS app
  * Add angular module named **ngYDrag** to your AngularJS app
 
